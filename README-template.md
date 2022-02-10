@@ -68,6 +68,15 @@ https://stackoverflow.com/questions/41087410/why-use-before-pseudo-elements-to-d
 Intense discussion over should img use or background-image used
 https://stackoverflow.com/questions/492809/when-to-use-img-vs-css-background-image?page=1&tab=votes#tab-top
 
+2. Difference between :before and ::before
+
+First of all, they are the same. :before is the CSS2 syntax while ::before is the CSS3 syntax. Why they need to renew the syntax? This is done to separate pseudo-element(::type) from pseudo-class(like :hover), more in https://www.d.umn.edu/~lcarlson/csswork/selectors/pseudo_dif.html.
+
+Their difference is pseudo-element selecting part of the element, while pseudo-class specifying the state of the element.
+
+The syntax of using :: 
+https://stackoverflow.com/questions/7327326/what-is-the-difference-between-before-and-before
+
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```

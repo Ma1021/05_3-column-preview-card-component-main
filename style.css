@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #f2f2f2;
+}
+
+body main {
+  color: rgba(255, 255, 255, 0.75);
+  min-width: 950px;
+  max-width: 950px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+body main .column {
+  -ms-flex-preferred-size: calc(100% / 3);
+      flex-basis: calc(100% / 3);
+  padding: 3rem;
+}
+
+body main .column h1 {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-family: "Big Shoulders Display", sans-serif;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+body main .column p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+body main .column button {
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 1.5rem;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body main .column:first-child {
+  background-color: #e38826;
+}
+
+body main .column:first-child button {
+  color: #e38826;
+}
+
+body main .column:first-child button:hover {
+  background-color: #e38826;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+body main .column:nth-child(3n-1) {
+  background-color: #006970;
+}
+
+body main .column:nth-child(3n-1) button {
+  color: #006970;
+}
+
+body main .column:nth-child(3n-1) button:hover {
+  background-color: #006970;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+body main .column:last-child {
+  background-color: #004241;
+}
+
+body main .column:last-child button {
+  color: #004241;
+}
+
+body main .column:last-child button:hover {
+  background-color: #004241;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+body main .column::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+body main .column:first-child::before {
+  background-image: url("./images/icon-sedans.svg");
+}
+
+body main .column:nth-child(3n-1)::before {
+  background-image: url("./images/icon-suvs.svg");
+}
+
+body main .column:last-child::before {
+  background-image: url("./images/icon-luxury.svg");
+}
+
+body footer {
+  padding-bottom: 0.5rem;
+}
+
+body::before {
+  content: "";
+  height: 15px;
+  padding-top: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  body main {
+    width: 90%;
+    max-width: 480px;
+    height: 90%;
+    max-height: 1360px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  body main .column {
+    -ms-flex-preferred-size: calc(100% / 3);
+        flex-basis: calc(100% / 3);
+    padding: 3rem;
+    max-height: 453.33333px;
+  }
+  body main .column h1 {
+    margin-top: 1rem;
+  }
+  body main .column p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

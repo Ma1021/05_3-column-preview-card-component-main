@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$bright_orange: hsl(31, 77%, 52%);
+$dark_cyan: hsl(184, 100%, 22%);
+$very_dark_cyan: hsl(179, 100%, 13%);
+
+$para_transparent_white: hsla(0, 0%, 100%, 0.75);
+$very_light_gray: hsl(0, 0%, 95%);
+
+*{
+    margin:0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: $very_light_gray;
+
+    main{
+        color: $para_transparent_white;
+        
+        min-width: 950px;
+        max-width: 950px;
+        
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: row;
+    
+        overflow: hidden;
+        border-radius: 10px;
+
+        .column{
+            flex-basis: calc(100% / 3);
+            padding: 3rem;
+
+            h1{
+                margin-top: 1rem;
+                font-weight: 700;
+                font-family: "Big Shoulders Display", sans-serif;
+                color: $very_light_gray;
+                text-transform: uppercase;
+            }
+
+            p{
+                line-height: 1.5rem;
+                margin-top: 1.5rem;
+                margin-bottom: 5rem;
+            }
+
+            button{
+                background-color: $very_light_gray;
+                border: 1px solid $very_light_gray;
+                height: 2rem;
+                padding: 0 1rem;
+                border-radius: 1.5rem;
+                font-family:'Lexend Deca', sans-serif;
+            }
+        }
+        
+        
+        // Background color of each column
+        .column:first-child{
+            background-color: $bright_orange;
+
+            button{
+                color: $bright_orange;
+            }
+
+            button:hover{
+                background-color: $bright_orange;
+                color: $very_light_gray;
+                cursor: pointer;
+            }
+        }
+        
+        .column:nth-child(3n-1){
+            background-color: $dark_cyan;
+
+            button{
+                color: $dark_cyan;
+            }
+
+            button:hover{
+                background-color: $dark_cyan;
+                color: $very_light_gray;
+                cursor: pointer;
+            }
+        }
+
+        .column:last-child{
+            background-color: $very_dark_cyan;
+
+            button{
+                color: $very_dark_cyan;
+            }
+
+            button:hover{
+                background-color: $very_dark_cyan;
+                color: $very_light_gray;
+                cursor: pointer;
+            }
+        }
+        
+        // for icon in each column
+        .column::before{
+            content:"";
+            display: block;
+            width: 100%;
+            height: 64px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+        
+        .column:first-child::before{
+            background-image: url('./images/icon-sedans.svg');
+        }
+
+        .column:nth-child(3n-1)::before{
+            background-image: url('./images/icon-suvs.svg');
+        }
+            
+        .column:last-child::before{
+            background-image: url('./images/icon-luxury.svg');
+        }
+
+    }
+
+    footer{
+        padding-bottom: 0.5rem;
+    }
+
+}
+
+body::before{
+    content:"";
+    height: 15px;
+    padding-top: 0.5rem;
+}
+
+
+@media screen and (max-width: 480px) {
+    body{
+
+        main{        
+            width: 90%;
+            max-width: 480px;
+            height: 90%;
+            max-height: 1360px;
+            
+            flex-grow: 1;
+    
+            flex-direction: column;
+        
+            overflow: hidden;
+            border-radius: 10px;
+    
+            .column{
+                flex-basis: calc(100% / 3);
+                padding: 3rem;
+                max-height: (1360px / 3);
+
+                h1{
+                    margin-top: 1rem;
+                }
+    
+                p{
+                    margin-top: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
