@@ -37,18 +37,14 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
 1. Curiosity on should I use img tag or psuedo selector to place the icon
 
+As dicussed in the below link, if the icon does not have meaning to the content so giving them a img tag will make them being searched by the engine. 
+I have tried to use an empty div and background image here. It still works!
 https://stackoverflow.com/questions/41087410/why-use-before-pseudo-elements-to-display-glyph-icons
 
 Intense discussion over should img use or background-image used
