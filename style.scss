@@ -26,16 +26,14 @@ body{
     main{
         color: $para_transparent_white;
         
-        min-width: 950px;
+        width: 80%;
         max-width: 950px;
         
         margin: 0 auto;
 
         display: flex;
         flex-direction: row;
-    
-        overflow: hidden;
-        border-radius: 10px;
+        flex-wrap: nowrap;
 
         .column{
             flex-basis: calc(100% / 3);
@@ -69,6 +67,8 @@ body{
         // Background color of each column
         .column:first-child{
             background-color: $bright_orange;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
 
             button{
                 color: $bright_orange;
@@ -97,6 +97,8 @@ body{
 
         .column:last-child{
             background-color: $very_dark_cyan;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
 
             button{
                 color: $very_dark_cyan;
@@ -135,6 +137,7 @@ body{
 
     footer{
         padding-bottom: 0.5rem;
+        display: block;
     }
 
 }
@@ -148,19 +151,16 @@ body::before{
 
 @media screen and (max-width: 480px) {
     body{
+        display: block;
 
         main{        
             width: 90%;
             max-width: 480px;
-            height: 90%;
-            max-height: 1360px;
             
             flex-grow: 1;
     
-            flex-direction: column;
+            display: block;
         
-            overflow: hidden;
-            border-radius: 10px;
     
             .column{
                 flex-basis: calc(100% / 3);
@@ -175,6 +175,13 @@ body::before{
                     margin-top: 1.5rem;
                     margin-bottom: 1.5rem;
                 }
+            }
+
+            .column:first-child{
+                border-radius: 10px 10px 0 0 ;
+            }
+            .column:last-child{
+                border-radius: 0 0 10px 10px ;
             }
         }
     }
