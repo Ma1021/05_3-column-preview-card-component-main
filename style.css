@@ -57,13 +57,17 @@ body main .column p {
   margin-bottom: 5rem;
 }
 
-body main .column button {
+body main .column a {
   background-color: #f2f2f2;
   border: 1px solid #f2f2f2;
   height: 2rem;
   padding: 0 1rem;
   border-radius: 1.5rem;
   font-family: 'Lexend Deca', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2;
+  vertical-align: center;
 }
 
 body main .column:first-child {
@@ -72,12 +76,12 @@ body main .column:first-child {
   border-bottom-left-radius: 10px;
 }
 
-body main .column:first-child button {
+body main .column:first-child a {
   color: #e38826;
 }
 
-body main .column:first-child button:hover {
-  background-color: #e38826;
+body main .column:first-child a:hover {
+  background: transparent;
   color: #f2f2f2;
   cursor: pointer;
 }
@@ -86,12 +90,12 @@ body main .column:nth-child(3n-1) {
   background-color: #006970;
 }
 
-body main .column:nth-child(3n-1) button {
+body main .column:nth-child(3n-1) a {
   color: #006970;
 }
 
-body main .column:nth-child(3n-1) button:hover {
-  background-color: #006970;
+body main .column:nth-child(3n-1) a:hover {
+  background: transparent;
   color: #f2f2f2;
   cursor: pointer;
 }
@@ -102,12 +106,12 @@ body main .column:last-child {
   border-bottom-right-radius: 10px;
 }
 
-body main .column:last-child button {
+body main .column:last-child a {
   color: #004241;
 }
 
-body main .column:last-child button:hover {
-  background-color: #004241;
+body main .column:last-child a:hover {
+  background: transparent;
   color: #f2f2f2;
   cursor: pointer;
 }

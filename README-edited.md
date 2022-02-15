@@ -27,7 +27,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [HERE](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-/hub/3column-preview-card-component-n_0pbp9n8)
 - Live Site URL: [HERE](https://ma1021.github.io/05_3-column-preview-card-component-main/)
 
 ## My process
