@@ -23,6 +23,7 @@ body{
     font-family: 'Lexend Deca', sans-serif;
     background-color: $very_light_gray;
 
+    
     main{
         color: $para_transparent_white;
         
@@ -30,6 +31,9 @@ body{
         max-width: 950px;
         
         margin: 0 auto;
+        
+        border-radius: 10px;
+        overflow: hidden;
 
         display: flex;
         flex-direction: row;
@@ -48,7 +52,7 @@ body{
             }
 
             p{
-                line-height: 1.5rem;
+                line-height: 1.5;
                 margin-top: 1.5rem;
                 margin-bottom: 5rem;
             }
@@ -72,8 +76,6 @@ body{
         // Background color of each column
         .column:first-child{
             background-color: $bright_orange;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
 
             a{
                 color: $bright_orange;
@@ -102,8 +104,6 @@ body{
 
         .column:last-child{
             background-color: $very_dark_cyan;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
 
             a{
                 color: $very_dark_cyan;
@@ -182,12 +182,6 @@ body::before{
                 }
             }
 
-            .column:first-child{
-                border-radius: 10px 10px 0 0 ;
-            }
-            .column:last-child{
-                border-radius: 0 0 10px 10px ;
-            }
         }
     }
 }
